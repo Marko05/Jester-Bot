@@ -8,7 +8,7 @@ const forHumans = require("../../utils/forhumans")
 module.exports = {
   name: "play",
   description: "Play some music",
-  category: "play <song>",
+  category: "play <song name | song url>",
 
   run: async (client , message, args) => {
 
@@ -86,7 +86,7 @@ const channel = message.member.voice.channel;
         .addField("Song Name", song.name, false)
         .addField("Views", song.views, false)
         .addField("Duration", song.duration, false)
-        .addField("Requested By", song.requested.tag, false)
+        .addField("Requested By", song.requested, false)
         .addField("Queue Position" , list.queue.length)
         .setTimestamp()
     );

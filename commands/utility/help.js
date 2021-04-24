@@ -20,7 +20,7 @@ module.exports = {
     .setColor("RED")
     .setDescription(`For additional informations on a command, use \`>>help <command>\``)
     .addField(`⚒ Moderation [12]` , `\`ban\` | \`kick\` | \`unban\` | \`lock\` | \`lockchannel\` | \`unlockchannel\` | \`roleadd\` | \`roleremove\` | \`slowmode\` | \`poll\` |  \`clear\` | \`setnick\``)
-    .addField(`💰 Economy [4]` , `\`balance\` | \`work\` | \`lb\` | \`beg\``)
+    .addField(`💰 Economy [12]` , `\`balance\` | \`addmoney\` | \`removemoney\` | \`beg\` | \`buy\` | \`shop\` | \`daily\` | \`weekly\` | \`fish\` | \`hunt\` | \`mine\` | \`work\``)
     .addField(`🎶 Music [13]` , `\`play\` | \`queue\` | \`np\` | \`loop\` | \`pause\` | \`resume\` | \`remove\` | \`skip\` | \`stop\` | \`skipto\` | \`volume\` | \`shuffle\` | \`lyrics\``)
     .addField(`:joy: Fun [31]` , `\`8ball\` | \`hangman\` | \`tictactoe\` | \`chatbot\` | \`cat\` | \`cuddle\` | \`dog\` | \`feed\` | \`hug\` | \`kiss\` | \`owo\` | \`pat\` | \`slap\` | \`smug\` | \`meme\` | \`spoiler\` | \`tickle\` | \`waifu\` | \`ytcomment\` | \`changemymind\` | \`dark\` | \`delete\` |  \`phub\` | \`facepalm\` | \`gay\` | \`rip\` | \`shit\` | \`trash\` | \`wanted\` | \`wasted\` | \`trigger\``)
     .addField(`🔗 Info [10]` , `\`rank\` | \`leaderboard\` | \`weather\` | \`urban\` | \`fact\` | \`covid\` | \`pokemon\` | \`botinfo\` | \`userinfo\` |  \`serverinfo\``)

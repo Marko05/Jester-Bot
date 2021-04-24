@@ -4,6 +4,7 @@ module.exports = {
   name: "test",
   description: "Test Command",
   category: "test",
+  usage: "test",
 
   run: async (client , message, args) => {
 

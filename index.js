@@ -13,7 +13,6 @@ client.queue = new Map();
 
 const keepAlive = require('./server');
 
-keepAlive();
 
 const ebal = (guild, guildName, user) => new Promise(async ful => {
   const data = await eco.findOne({ guild, guildName, user})
@@ -191,4 +190,5 @@ client.on("guildCreate" , guild => {
   defaultChannel.send(embed)
 })
 
+keepAlive();
 client.login(token)

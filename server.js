@@ -1,13 +1,27 @@
 const express = require('express');
+
 const server = express();
 
-module.exports = keepAlive;
+
 
 server.all('/', (req, res)=>{
-    res.send('Jester is Online!\nConnected to Servers!');
-}); 
+
+   res.setHeader('Content-Type', 'text/html');
+
+   res.write('<link href="https://fonts.googleapis.com/css?family=Roboto Condensed" rel="stylesheet"> <style> body {font-family: "Roboto Condensed";font-size: 22px;} <p>Hosting Active</p>');
+
+   res.end();
+
+})
+
 
 
 function keepAlive(){
-    server.listen(3000, ()=>{console.log("Server is Ready!")});
+
+   server.listen(3000, ()=>{console.log("Server is online!")});
+
 }
+
+
+
+module.exports = keepAlive;
