@@ -4,7 +4,7 @@ module.exports = {
   name: "remove",
   description: "Removes a song from the queue",
   category: "music",
-  usage: "remove <song number>",
+  usage: "remove <queue number>",
 
   run: async (client , message, args) => {
 
@@ -17,7 +17,7 @@ module.exports = {
     return message.reply("Please provide a song number")
 
   if (isNaN(args[0]))
-    return message.reply("Please provide a real nummber \`Example: >>remove 3\`")
+    return message.reply("Please provide a real number \`Example: >>remove 3\`")
 
   let queue = message.client.queue.get(message.guild.id);
   if (args[0] == 1)

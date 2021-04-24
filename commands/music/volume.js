@@ -23,8 +23,9 @@ module.exports = {
           "Current Volume"
         )
         .setColor("RED")
-        .setDescription("**Current volume is " + queue.volume + " **")
+        .setDescription(`Current volume is \`${queue.volume}\``)
         .setFooter(`Requested By ${message.author.tag}` , message.author.displayAvatarURL({dynamic: true}))
+        .setThumbnail(client.user.displayAvatarURL())
         .setTimestamp()
     );
 
@@ -40,6 +41,7 @@ module.exports = {
       )
       .setColor("RED")
       .setDescription(`Set the Volume to \`${args [0]}\``)
+      .setThumbnail(client.user.displayAvatarURL())
       .setFooter(`Requested By ${message.author.tag}` , message.author.displayAvatarURL({dynamic: true}))
       .setTimestamp()
   );
