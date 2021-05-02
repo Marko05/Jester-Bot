@@ -6,10 +6,12 @@ module.exports = {
         category: "utility",
         description: "Sets A Channel Where The Bot Can Send Moderation Logs!",
         usage: "setlogchannel <@channel | channel ID | channel name>",
+        aliases: ["slc"],
     
     run: async (client, message, args) => {
-        if (!message.member.hasPermission("ADMINISTRATOR")) return message.reply("**You Do Not Have The Required Permissions! - [ADMINISTRATOR]")
-    if (!args[0]) {
+        if (!message.member.hasPermission("ADMINISTRATOR")) return message.reply("You Do Not Have The Required Permissions! - [ADMINISTRATOR]")
+        
+        if (!args[0]) {
       let b = await db.fetch(`modlog_${message.guild.id}`);
       let channelName = message.guild.channels.cache.get(b);
       if (message.guild.channels.cache.has(b)) {

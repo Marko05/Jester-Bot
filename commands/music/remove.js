@@ -5,6 +5,7 @@ module.exports = {
   description: "Removes a song from the queue",
   category: "music",
   usage: "remove <queue number>",
+  aliases: ["rem"],
 
   run: async (client , message, args) => {
 

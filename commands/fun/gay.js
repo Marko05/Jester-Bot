@@ -5,7 +5,7 @@ module.exports = {
   name: "gay",
   description: "Puts someones Avatar in the LQBTQ Flag",
   category: "fun",
-  usage: "rainbow <@user>",
+  usage: "gay <@user>",
 
   run: async (client , message , args) => {
 

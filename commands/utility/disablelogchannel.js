@@ -5,9 +5,10 @@ module.exports = {
         category: 'utility',
         description: 'Disables Server Modlog Channel',
         usage: 'disablelogchannel <#channel | channel name | channel ID>',
+        aliases: ["dlc"],
 
     run: async (client, message, args) => {
-        if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.reply("You Do Not Have The Required Permissions! - [ADMINISTRATOR]")
+        if (!message.member.hasPermission("ADMINISTRATOR")) return message.reply("You Do Not Have The Required Permissions! - [ADMINISTRATOR]")
 
         try {
             let a = db.fetch(`modlog_${message.guild.id}`)

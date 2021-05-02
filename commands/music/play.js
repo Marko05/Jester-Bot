@@ -8,7 +8,9 @@ const forHumans = require("../../utils/forhumans")
 module.exports = {
   name: "play",
   description: "Play some music",
-  category: "play <song name | song url>",
+  category: "music",
+  usage: "play <song name | song url>",
+  aliases: ["p"],
 
   run: async (client , message, args) => {
 

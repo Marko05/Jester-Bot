@@ -8,6 +8,7 @@ module.exports = {
     category: "leveling",
     description: "Shows the ranks leaderboard",
     usage: "leaderboard",
+    aliases: ["lb"],
     guildOnly: true,
 
     run: async (client, message , args) => {

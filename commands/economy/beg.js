@@ -27,7 +27,7 @@ module.exports = {
 
     const embed1 = new Discord.MessageEmbed()
     .setTitle(`Beg`)
-    .setDescription(`\`${message.author}\` begged to \`${give}\` and earnt \`${amountearned}$\``)
+    .setDescription(`${message.author} begged to \`${give}\` and earnt \`${amountearned}$\``)
     .setColor("RED")
     .setThumbnail(client.user.displayAvatarURL())
     .setTimestamp()

@@ -6,13 +6,14 @@ module.exports = {
   description: "Change your mind",
   category: "fun",
   usage: "changemymind <text>",
+  aliases: ["cmm"],
 
   run: async (client , message , args) => {
 
 
   let text = args.join(" ");
 
-  if(!args[0]) return message.channel.send('Provide a valid HEX code (#FF0000)');
+  if(!text) return message.reply('Please provide a text');
 
   let image = await canvacord.Canvas.changemymind(text);
 

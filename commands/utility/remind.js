@@ -6,6 +6,7 @@ module.exports = {
   description: "Sets an reminder for you",
   category: "utility",
   usage: "remind <time s/m/h> <reason>",
+  aliases: ["r"],
 
   run: async (client , message, args) => {
 

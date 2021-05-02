@@ -6,6 +6,7 @@ module.exports = {
   category: "info",
   description: "Informations of a user",
   usage: "userinfo <@user>",
+  aliases: ["ui"],
   
   run: async (client, message, args) => {
 

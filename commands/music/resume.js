@@ -5,6 +5,7 @@ module.exports = {
   description: "Resume current song",
   category: "music",
   usage: "resume",
+  aliases: ["res"],
 
   run: async (client , message, args) => {
 

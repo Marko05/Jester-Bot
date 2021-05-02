@@ -6,6 +6,7 @@ module.exports = {
   category: "moderation",
   description: "Slowmodes a channel",
   usage: "slowmode <#channel> <time s/m/h> | slowmode <#channel> off",
+  aliases: ["sm"],
 
   run: async (client, message, args) => {
 

@@ -5,6 +5,7 @@ module.exports = {
         category: "moderation",
         description: "unlock channel",
         usage: "unlockchannel",
+        aliases: ["ulc" , "unlockc"],
 
     run: async (client, message, args) => {
         

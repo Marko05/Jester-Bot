@@ -10,7 +10,7 @@ module.exports = {
     run: async (client, message, args) => {
 
     const text = args.slice(0).join(" ")
-    if (!text) return message.reply('Please specify a question')
+    if (!text) return message.reply('Please provide a question')
 
      const { body } = await superagent
     .get("https://nekos.life/api/v2/8ball")

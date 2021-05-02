@@ -5,6 +5,7 @@ module.exports = {
   description: "Shuffles the queue",
   category: "music",
   usage: "shuffle",
+  aliases: ["sh"],
 
   run: async (client, message, args) => {
 

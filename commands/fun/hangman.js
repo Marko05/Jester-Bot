@@ -5,6 +5,7 @@ module.exports = {
     category: "fun",
     description: "Play some Hangman",
     usage: "hangman <#channel> <word>",
+    aliases: ["hm"],
 
     run : async(client, message, args) => {
         if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply('You dont have permissions to use this command! - [MANAGE_MESSAGES]')

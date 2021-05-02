@@ -5,6 +5,7 @@ module.exports = {
     category: "fun",
     description: "Play some TicTacToe",
     usage: "tictactoe <@user>",
+    aliases: ["ttt"],
     
     run : async(client, message, args) => {
         const member = message.mentions.members.first() 

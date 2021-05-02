@@ -6,6 +6,7 @@ module.exports = {
   description: "Facepalm someone",
   category: "fun",
   usage: "facepalm <@user>",
+  aliases: ["fp"],
 
   run: async (client , message , args) => {
 

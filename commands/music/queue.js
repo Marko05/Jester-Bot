@@ -5,6 +5,7 @@ module.exports = {
   description: "Shows the queue",
   category: "music",
   usage: "queue",
+  aliases: ["q"],
 
   run: async (client , message, args) => {
 

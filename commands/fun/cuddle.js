@@ -9,10 +9,9 @@ module.exports = {
     
     run: async (client, message, args) => {
 
-    const user = message.mentions.users.first()
-    if(!user) return message.reply("Please mention a user")
+    const user = message.mentions.users.first() || message.guild.members.cache.get(args [0])
 
-    if(message.mentions.users.first().id == message.author.id) return message.reply("You cannot cuddle yourself")
+    if(user.id == message.author.id) return message.reply("You cannot cuddle yourself")
 
     const { body } = await superagent
     .get("https://nekos.life/api/v2/img/cuddle")

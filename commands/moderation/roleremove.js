@@ -7,6 +7,7 @@ module.exports = {
     description: "Removes a role from a member",
     category: "moderation",
     usage: "removerole <@user mention/id> <role mention/role id>",
+    aliases: ["rr" , "roler"],
  
   run: async (client, message, args) => {
 

@@ -9,6 +9,7 @@ module.exports = {
     category: "info",
     description: "Get some bot informations",
     usage: "botinfo",
+    aliases: ["bi"],
 
 run:  async (client, message, args) => {
 
@@ -30,7 +31,7 @@ run:  async (client, message, args) => {
   .addField('CPU Speed' , `${core.speed} MHz` , true)
   .addField("Mem Usage", `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} / ${(os.totalmem() / 1024 / 1024).toFixed(2)} MB`, true)
   .setTimestamp()
-  .setFooter(`Requested By: ${message.author.tag}` , message.author.displayAvatarURL())
+  .setFooter(`Requested By: ${message.author.tag}` , message.author.displayAvatarURL({dynamic: true}))
 
   message.channel.send(embed)
 }

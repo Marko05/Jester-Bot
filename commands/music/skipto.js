@@ -5,6 +5,7 @@ module.exports = {
   description: "Skip to a song",
   category: "music",
   usage: "skipto <queue number>",
+  aliases: ["st"],
 
   run: async (client , message, args) => {
         

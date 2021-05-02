@@ -5,9 +5,10 @@ module.exports = {
     category: "fun",
     description: "Chats with the bot",
     usage: "chatbot <message>",
+    aliases: ["cb"],
 
     run : async(client, message, args) => {
       
-        chatBot(message, args.join(" "))
+        chatBot(message.channel, args.join(" "))
     }
 }

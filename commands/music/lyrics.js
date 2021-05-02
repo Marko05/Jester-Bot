@@ -6,6 +6,7 @@ module.exports = {
   description: "Shows lyrics of the current song",
   category: "music",
   usage: "lyrics",
+  aliases: ["ly"],
 
   run: async (client , message, args) => {
 

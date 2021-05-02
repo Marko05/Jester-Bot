@@ -8,6 +8,7 @@ module.exports = {
     category: "economy",
     description: "View your balance",
     usage: `balance <@user>`,
+    aliases: ["bal" , "b"],
     
     run: async (client, message, args) => {
     var user = message.mentions.users.first() || message.author

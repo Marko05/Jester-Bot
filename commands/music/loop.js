@@ -5,6 +5,7 @@ module.exports = {
   description: "Loop current music",
   category: "music",
   usage: "loop",
+  aliases: ["l"],
 
   run: async (client , message, args) => {
 

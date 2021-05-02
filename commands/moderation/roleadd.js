@@ -7,6 +7,7 @@ module.exports = {
     description: "Add a role to a member",
     category: "moderation",
     usage: "roleadd <@user mention/id> <role mention/role id>",
+    aliases: ["ra" , "rolea"],
  
   run: async (client, message, args) => {
 

@@ -5,6 +5,7 @@ module.exports = {
   description: "Sets the volume",
   category: "music",
   usage: "volume <1-100>",
+  aliases: ["vol" , "v"],
 
   run: async (client, message, args) => {
 

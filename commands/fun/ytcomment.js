@@ -6,6 +6,7 @@ module.exports = {
   description: "Writes an comment in youtube",
   category: "fun",
   usage: "ytcomment <message>",
+  aliases: ["ytc"],
 
   run: async (client , message , args) => {
 

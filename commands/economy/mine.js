@@ -39,7 +39,7 @@ module.exports = {
     } else {
 
     if(db.has(`${message.author.id}` , "pickaxe") === false) {
-        return message.channel.send(`You dont have a \`pickaxe\`. You can buy a \`pickaxe\` on the shop by typing \`+shop\``)
+        return message.channel.send(`You dont have a \`pickaxe\``)
 
     }
 }

@@ -5,9 +5,10 @@ module.exports = {
     category: "economy",
     description: "Add Money To Someone",
     usage: `addmoney <@user> <amount>`,
+    aliases: ["addm" , "am"],
     
     run: async (client, message, args) => {
-if(!message.member.hasPermission("ADMINISTRATOR")) return message.reply("You dont have permissions to use this command - [ADMINISTRATOR]")
+if(!message.member.hasPermission("ADMINISTRATOR")) return message.reply("You Do Not Have The Required Permissions! - [ADMINISTRATOR]")
 
 let user = message.mentions.users.first()
 if(!user) return message.reply("Please provide a user")

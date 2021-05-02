@@ -6,6 +6,7 @@ module.exports = {
         description: "Unban a user from the guild",
         category: "moderation",
         usage: "unban <@user | User ID | User Name> <reason> (optional)",
+        aliases: ["unb"],
     
     run: async (client, message, args) => {
 

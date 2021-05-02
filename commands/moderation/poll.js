@@ -6,17 +6,18 @@ module.exports = {
     category: "moderation",
     description: "Create a poll",
     usage: "poll <#channel> <poll>",
+    
 
     run: async(bot, message, args) => {
 
     if (!message.member.hasPermission("MANAGE_ROLES")) 
-    return message.channel.reply(`:x: **|** You don´t have permissions`)
+    return message.reply(`:x: **|** You don´t have permissions`)
 
     var pollchannel = message.mentions.channels.first();
     if(!pollchannel) return message.reply("Please mention a channel")
     
     var poll = args.slice(1).join(" ")
-    if(!poll) return message.channel.reply("Please specify a question")
+    if(!poll) return message.reply("Please specify a question")
 
     const embed = new MessageEmbed()
     .setTitle(`📊 | New Poll from ${message.author.tag}`)

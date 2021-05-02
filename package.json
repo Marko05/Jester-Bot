@@ -23,6 +23,8 @@
     "ffmpeg-static": "^4.3.0",
     "imageapi.js": "^1.6.1",
     "lyrics-finder": "^21.7.0",
+    "mal-scraper": "^2.11.3",
+    "memer-api": "^2.1.5",
     "moment": "^2.29.1",
     "mongoose": "^5.12.3",
     "ms": "^2.1.3",

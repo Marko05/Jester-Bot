@@ -6,6 +6,7 @@ module.exports = {
     category: "utility",
     description: "Shows your avatar or user avatar",
     usage: "avatar <@user>",
+    aliases: ["av"],
     
     run: async (client, message, args) => { 
 

@@ -13,7 +13,7 @@ const user = message.mentions.users.first() || message.author
 
   let avatar = user.displayAvatarURL({dynamic: true, format: "png"});
 
-  let image = await canvacord.Canvas.delete(avatar , msg)
+  let image = await canvacord.Canvas.delete(avatar , message)
 
   let triggered = new Discord.MessageAttachment(image, "delete.png")
 

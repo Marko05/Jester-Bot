@@ -7,6 +7,7 @@ module.exports = {
     category: "fun",
     description: "Gives informations about a pokemon",
     usage: `pokemon <pokemon>`,
+    aliases: ["poke"],
     
     run: async (client, message, args) => {
 

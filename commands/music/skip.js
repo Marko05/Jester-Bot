@@ -6,6 +6,7 @@ module.exports = {
   description: "Skips the current song",
   category: "music",
   usage: "skip",
+  aliases: ["s"],
 
   run: async (client, message, args) => {
 

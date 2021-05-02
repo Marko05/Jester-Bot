@@ -7,6 +7,7 @@ module.exports = {
         category: "moderation",
         description: "Sets or change an nickname from a user",
         usage: "setnick <@user | User Name | User ID>",
+        aliases: ["sn" , "setn"],
 
     run: async (client, message, args) => {
         if (!message.member.hasPermission("MANAGE_GUILD")) return message.reply("You Dont Have Permissions To Change Nickname! - [MANAGE_GUILD]");

@@ -8,6 +8,7 @@ const Levels = require("discord-xp");
 const Guild = require("./models/guild");
 const eco = require("./models/economy");
 const mongoCurrency = require('discord-mongo-currency')
+const schema = require("./models/custom-commands")
 client.queue = new Map();
 
 
@@ -96,7 +97,7 @@ for (const file of commandFiles) {
 	client.commands.set(command.name, command);
 }
 
-client.on('message', message => {
+client.on('message', async message => {
 	if (!message.content.startsWith(prefix) || message.author.bot) return;
 
 	const args = message.content.slice(prefix.length).trim().split(/ +/);
@@ -104,6 +105,9 @@ client.on('message', message => {
 
 	const command = client.commands.get(commandName)
 		|| client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
+
+        const data = await schema.findOne({ Guild: message.guild.id , Command: commandName})
+        if(data) message.channel.send(data.Response)
 
 	if (!command) return;
 
@@ -165,7 +169,8 @@ client.on("message", async (message) => {
         const hasLeveledUp = await Levels.appendXp(message.author.id, message.guild.id, randomXp);
         if (hasLeveledUp) {
         const user = await Levels.fetch(message.author.id, message.guild.id);
-        message.channel.send(`GG ${message.author}! You leveled up to Level \`${user.level}\`! Keep it going!`);
+        message.channel.send(`GG ${message.author.username}! You leveled up to Level \`${user.level}\`! Keep it going!`)
+        .then((m) => m.delete({ timeout: 10000 }))
         }
 
 });
@@ -181,7 +186,7 @@ client.on("guildCreate" , guild => {
   })
   const embed = new Discord.MessageEmbed()
   .setAuthor(`Thanks for adding me to your server!` , guild.iconURL({dynamic: true}))
-  .setDescription(`Hey There! I am Jester. Your personal Discord Bot with lots of cool and helpful functions! Now I am going to show you my 6 categorys\n\n❯ Moderation\n❯ Economy\n❯ Music\n❯ Fun\n❯ Info\n❯ Utility\n\nTo get started, type \`>>help\`\n\nI wish you a lot of fun with me!`)
+  .setDescription(`Hey There! I am Jester. Your personal Discord Bot with lots of cool and helpful functions! Now I am going to show you my 7 categorys\n\n❯ Moderation\n❯ Economy\n❯ Music\n❯ Custom Commands\n❯ Fun\n❯ Info\n❯ Utility\n\nTo get started, type \`>>help\`\n\nI wish you a lot of fun with me!`)
   .setColor("RED")
   .setThumbnail(client.user.displayAvatarURL())
   .setTimestamp()
@@ -189,6 +194,28 @@ client.on("guildCreate" , guild => {
 
   defaultChannel.send(embed)
 })
+client.on("messageReactionAdd", (reaction, user) => {
+  require("./events/guild/messageReactionAdd")(reaction, user);
+});
+client.on("messageReactionRemove", (reaction, user) => {
+  require("./events/guild/messageReactionRemove")(reaction, user);
+});
+client.on("ready" , () => {
+    const activities_list = [ 
+            `${client.commands.size} Commands`,
+            `${client.guilds.cache.size} guilds`
+            ];
+            
+            const index = Math.floor(Math.random() * activities_list.length);
+
+            console.log(`${client.user.tag} successfully logged in`)
+
+            setInterval(() => {
+                const index = Math.floor(Math.random() * (activities_list.length));
+                client.user.setActivity(`>>help - ` + activities_list[index]);
+            }, 10000);
+})
+client.on
 
 keepAlive();
 client.login(token)

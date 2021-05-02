@@ -6,6 +6,7 @@ module.exports = {
     category: "utility",
     description: "Shows you the help command",
     usage: "help",
+    aliases: ["h"],
     
     run: async (client, message, args) => {    
 
@@ -19,13 +20,14 @@ module.exports = {
     .setThumbnail(client.user.displayAvatarURL())
     .setColor("RED")
     .setDescription(`For additional informations on a command, use \`>>help <command>\``)
-    .addField(`⚒ Moderation [12]` , `\`ban\` | \`kick\` | \`unban\` | \`lock\` | \`lockchannel\` | \`unlockchannel\` | \`roleadd\` | \`roleremove\` | \`slowmode\` | \`poll\` |  \`clear\` | \`setnick\``)
+    .addField(`⚒ Moderation [16]` , `\`ban\` | \`kick\` | \`unban\` | \`rr-add\` | \`rr-delete\` | \`lock\` | \`lockchannel\` | \`unlockchannel\` | \`roleadd\` | \`roleremove\` | \`channel-create\` | \`channel-delete\` | \`slowmode\` | \`poll\` |  \`clear\` | \`setnick\``)
     .addField(`💰 Economy [12]` , `\`balance\` | \`addmoney\` | \`removemoney\` | \`beg\` | \`buy\` | \`shop\` | \`daily\` | \`weekly\` | \`fish\` | \`hunt\` | \`mine\` | \`work\``)
     .addField(`🎶 Music [13]` , `\`play\` | \`queue\` | \`np\` | \`loop\` | \`pause\` | \`resume\` | \`remove\` | \`skip\` | \`stop\` | \`skipto\` | \`volume\` | \`shuffle\` | \`lyrics\``)
-    .addField(`:joy: Fun [31]` , `\`8ball\` | \`hangman\` | \`tictactoe\` | \`chatbot\` | \`cat\` | \`cuddle\` | \`dog\` | \`feed\` | \`hug\` | \`kiss\` | \`owo\` | \`pat\` | \`slap\` | \`smug\` | \`meme\` | \`spoiler\` | \`tickle\` | \`waifu\` | \`ytcomment\` | \`changemymind\` | \`dark\` | \`delete\` |  \`phub\` | \`facepalm\` | \`gay\` | \`rip\` | \`shit\` | \`trash\` | \`wanted\` | \`wasted\` | \`trigger\``)
-    .addField(`🔗 Info [10]` , `\`rank\` | \`leaderboard\` | \`weather\` | \`urban\` | \`fact\` | \`covid\` | \`pokemon\` | \`botinfo\` | \`userinfo\` |  \`serverinfo\``)
+    .addField(`:globe_with_meridians: Custom Commands [3]` , `\`cc-create\` | \`cc-delete\` | \`cc-list\``)
+    .addField(`:joy: Fun [33]` , `\`8ball\` | \`hangman\` | \`tictactoe\` | \`chatbot\` | \`cat\` | \`cuddle\` | \`dog\` | \`feed\` | \`hug\` | \`kiss\` | \`owo\` | \`pat\` | \`slap\` | \`smug\` | \`meme\` | \`hack\` | \`spoiler\` | \`tickle\` | \`waifu\` | \`ytcomment\` | \`tweet\` | \`changemymind\` | \`dark\` | \`delete\` |  \`phub\` | \`facepalm\` | \`gay\` | \`rip\` | \`shit\` | \`trash\` | \`wanted\` | \`wasted\` | \`trigger\``)
+    .addField(`🔗 Info [11]` , `\`rank\` | \`leaderboard\` | \`weather\` | \`animesearch\` | \`urban\` | \`fact\` | \`covid\` | \`pokemon\` | \`botinfo\` | \`userinfo\` |  \`serverinfo\``)
     .addField(`⚙️ Utility [7]` , `\`help\` | \`setlogchannel\` | \`disablelogchannel\` | \`suggest\` | \`bug\` | \`remind\` | \`avatar\``)
-    .addField(`Links` , `[Invite](https://discord.com/api/oauth2/authorize?client_id=828262455767203842&permissions=8&scope=bot) | [Support Server](https://discord.gg/mzNAPvTUbN)`)
+    .addField(`Links` , `[Invite](https://discord.com/api/oauth2/authorize?client_id=828262455767203842&permissions=8&scope=bot) | [Support Server](https://discord.gg/mzNAPvTUbN) | [Void Bots](https://voidbots.net/bot/828262455767203842/)`)
     .setFooter(`Requested By: ${message.author.tag}` , message.author.displayAvatarURL({dynamic: true}))
     .setTimestamp()
 
@@ -43,7 +45,7 @@ module.exports = {
  
     var embed1 = new MessageEmbed()
     .setTitle(`Info for the Command ${commandObject.name}`)
-    .setDescription(`**Category:** \`${commandObject.category}\`\n**Description:** \`${commandObject.description}\`\n**Usage:** \`${commandObject.usage}\``)
+    .setDescription(`**Category:** \`${commandObject.category}\`\n**Description:** \`${commandObject.description}\`\n**Usage:** \`${commandObject.usage}\`\n**Aliases:** \`${commandObject.aliases || "No Aliases"}\``)
     .setColor("RED")
     .setThumbnail(client.user.displayAvatarURL())
     .setFooter(`Requested by: ${message.author.tag}` , message.author.displayAvatarURL({dynamic: true}))
