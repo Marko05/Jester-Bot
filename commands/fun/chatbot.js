@@ -9,6 +9,6 @@ module.exports = {
 
     run : async(client, message, args) => {
       
-        chatBot(message.channel, args.join(" "))
+        chatBot(message, args.join(" "))
     }
 }

@@ -9,7 +9,7 @@ module.exports = {
 
   run: async (client , message , args) => {
 
-const user = message.mentions.users.first() || message.author
+  const user = message.mentions.users.first() || message.author
 
   let avatar = user.displayAvatarURL({dynamic: true, format: "png"});
 

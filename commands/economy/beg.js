@@ -11,7 +11,7 @@ module.exports = {
     run: async (client, message, args) => {
 
     const begged = db.fetch(`begged_${message.author.id}`)
-    const timeout = 600000;
+    const timeout = 20000;
 
     if(begged != null && timeout - (Date.now() - begged) > 0) {
     var time = ms(timeout - (Date.now() - begged));

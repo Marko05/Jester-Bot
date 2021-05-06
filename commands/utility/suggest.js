@@ -15,7 +15,7 @@ module.exports = {
       return message.reply('Suggestions channel does not exist. Please make a channel called \`suggestions\`.');
 
     let messageArgs = args.join(' ');
-    if (!messageArgs) return message.channel.send('Specify a suggestion.');
+    if (!messageArgs) return message.reply('Specify a suggestion.');
 
     const embed = new MessageEmbed()
       .setColor("RED")

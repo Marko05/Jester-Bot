@@ -21,7 +21,7 @@ module.exports = {
 
         if (member.roles.highest.comparePositionTo(message.guild.me.roles.highest) >= 0) return message.reply('Cannot set or change the name of that user')
 
-        if (!args.slice(1).join(" ")) return message.channel.reply("Please enter a nickname");
+        if (!args.slice(1).join(" ")) return message.reply("Please enter a nickname");
 
         let nick = args.slice(1).join(' ');
 

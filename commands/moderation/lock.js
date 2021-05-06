@@ -10,6 +10,9 @@ module.exports = {
         
         if(!message.channel.permissionsFor(message.member).has("ADMINISTRATOR") ) return message.reply("You Dont Have The Permissions To Lock The Server! - [ADMINISTRATOR]");
 
+        if(args [0] === "on" || "off")
+        return message.reply("Please provide \`on\` or \`off\`")
+
         const channels = message.guild.channels.cache.filter(ch => ch.type !== 'category');
         if (args[0] === 'on') {
             channels.forEach(channel => {
